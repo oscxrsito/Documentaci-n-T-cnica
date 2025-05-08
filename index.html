@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentación de Python</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav id="navbar">
+<header>Documentación de Python</header>
+<a href="#Introducción" class="nav-link">Introducción</a>
+<a href="#Primeros_pasos" class="nav-link">Primeros pasos</a>
+<a href="#Variables_y_tipos_de_datos" class="nav-link">Variables y tipos de datos</a>
+<a href="#Funciones" class="nav-link">Funciones</a>
+<a href="#Estructuras_de_control" class="nav-link">Estructuras de control</a>
+</nav>
+
+<main id="main-doc">
+<section class="main-section" id="Introducción">
+<header>Introducción</header>
+<p>Python es un lenguaje de programación interpretado de alto nivel, dinámico y multipropósito. Su filosofía de diseño enfatiza la legibilidad del código con su notable uso de espacios en blanco significativos.</p>
+<p>Fue creado por Guido van Rossum y se lanzó por primera vez en 1991. Python se caracteriza por una sintaxis que favorece un código legible, lo que reduce el costo de mantenimiento del programa.</p>
+<p>Python admite múltiples paradigmas de programación, incluyendo programación orientada a objetos, imperativa, funcional y procedural.</p>
+<code># Este es un comentario en Python
+print("Hola mundo")</code>
+<p>Python es usado en una amplia variedad de aplicaciones, desde desarrollo web hasta análisis de datos, inteligencia artificial y aprendizaje automático.</p>
+</section>
+
+<section class="main-section" id="Primeros_pasos">
+<header>Primeros pasos</header>
+<p>Para empezar a trabajar con Python, primero debes instalarlo en tu sistema operativo. Puedes descargarlo desde python.org.</p>
+<p>Una vez instalado, puedes ejecutar código Python desde la terminal usando el intérprete:</p>
+<code>$ python
+>>> print("Hola mundo")
+Hola mundo</code>
+<p>También puedes crear archivos .py y ejecutarlos:</p>
+<code>$ python mi_script.py</code>
+<ul>
+<li>Python utiliza indentación para definir bloques de código</li>
+<li>La consola interactiva es útil para probar pequeños fragmentos de código</li>
+<li>Los archivos Python tienen la extensión .py</li>
+<li>Puedes usar entornos virtuales para gestionar dependencias</li>
+<li>Es recomendable seguir la guía de estilo PEP 8</li>
+</ul>
+</section>
+
+<section class="main-section" id="Variables_y_tipos_de_datos">
+<header>Variables y tipos de datos</header>
+<p>En Python, no necesitas declarar el tipo de variable. El tipo se infiere durante la ejecución.</p>
+<code>nombre = "Juan"
+edad = 25
+pi = 3.14159
+es_estudiante = True</code>
+<p>Python tiene varios tipos de datos integrados:</p>
+<ul>
+<li>str - para texto</li>
+<li>int - para números enteros</li>
+<li>float - para números decimales</li>
+<li>bool - True o False</li>
+<li>list - colección ordenada y mutable</li>
+<li>tuple - colección ordenada e inmutable</li>
+</ul>
+<p>Para verificar el tipo de una variable, puedes usar la función type():</p>
+<code>type("Hola")# <class 'str'>
+type(123)# <class 'int'>
+type(3.14)# <class 'float'></code>
+<p>Python es un lenguaje de tipado dinámico, lo que significa que una variable puede cambiar de tipo durante la ejecución del programa.</p>
+</section>
+
+<section class="main-section" id="Funciones">
+<header>Funciones</header>
+<p>Las funciones en Python se definen usando la palabra clave def, seguida del nombre de la función y paréntesis ().</p>
+<p>El cuerpo de la función debe estar indentado.</p>
+<code>def saludar(nombre):
+return "Hola " + nombre
+
+# Llamada a la función
+saludar("María")# Devuelve "Hola María"</code>
+<p>Python admite parámetros por defecto y argumentos con nombre:</p>
+<code>def saludar(nombre, mensaje="Hola"):
+return mensaje + " " + nombre
+
+# Diferentes formas de llamar la función
+saludar("Juan")# "Hola Juan"
+saludar("María", "Bienvenida")# "Bienvenida María"
+saludar(mensaje="Adiós", nombre="Pedro")# "Adiós Pedro"</code>
+<p>Las funciones en Python pueden devolver múltiples valores como una tupla:</p>
+<code>def dividir(a, b):
+cociente = a // b
+resto = a % b
+return cociente, resto
+
+q, r = dividir(20, 3)# q = 6, r = 2</code>
+</section>
+
+<section class="main-section" id="Estructuras_de_control">
+<header>Estructuras de control</header>
+<p>Python incluye varias estructuras de control para dirigir el flujo de ejecución del programa.</p>
+<p>La estructura condicional if-elif-else permite ejecutar diferentes bloques de código según se cumplan ciertas condiciones:</p>
+<code>edad = 18
+
+if edad < 18:
+print("Menor de edad")
+elif edad == 18:
+print("Justo 18 años")
+else:
+print("Mayor de edad")</code>
+<p>Los bucles for permiten iterar sobre secuencias (como listas, tuplas, diccionarios, conjuntos o cadenas):</p>
+<code>frutas = ["manzana", "banana", "cereza"]
+
+for fruta in frutas:
+print(fruta)</code>
+<p>El bucle while ejecuta un bloque de código mientras una condición sea verdadera:</p>
+<code>contador = 0
+
+while contador < 5:
+print(contador)
+contador += 1</code>
+<p>Python también ofrece comprensiones de listas, una forma concisa de crear listas:</p>
+<code>cuadrados = [x**2 for x in range(10)]# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code>
+</section>
+</main>
+</body>
+</html>
